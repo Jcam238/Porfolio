@@ -1,0 +1,504 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  color: rgb(240, 248, 255);
+  background-image: url(../img/background1.jpg);
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+header .sticky {
+  position: fixed;
+  top: 0;
+  height: 5%;
+  width: 25vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(82, 37, 82);
+  padding: 5px;
+  border-radius: 15px;
+  margin-top: 10px;
+  border: 1px solid rgb(240, 248, 255);
+  font-weight: bold;
+  opacity: 0.4;
+  transition: all 0.2s;
+}
+header .sticky a {
+  color: rgb(240, 248, 255);
+  text-decoration: none;
+}
+header .sticky a:hover {
+  color: rgb(245, 133, 245);
+}
+header .sticky:hover {
+  opacity: 1;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+main .imJuan {
+  height: 80vh;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+main .imJuan .myPhoto img {
+  max-width: 350px;
+  border-radius: 30px;
+}
+main .imJuan .myInfo {
+  height: 75%;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .imJuan .myInfo div h2 {
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.51);
+}
+main .imJuan .myInfo div h2 span {
+  color: rgb(226, 38, 226);
+  text-shadow: 3px 2px 3px rgba(226, 38, 226, 0.51);
+}
+main .imJuan .myInfo div p {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+main .imJuan .myInfo div a {
+  color: rgb(240, 248, 255);
+  text-decoration: none;
+  border: 2px solid rgb(226, 38, 226);
+  border-radius: 30px;
+  padding: 10px 15px 10px 15px;
+  transition: all 0.5s;
+}
+main .imJuan .myInfo div a:hover {
+  background-color: rgba(226, 38, 226, 0.678);
+  border: 2px solid rgb(240, 248, 255);
+}
+main .imJuan .myInfo div a::after {
+  content: url(../img/dl.png);
+  margin-left: 20px;
+}
+main .myCapacity {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+main .myCapacity .work {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5%;
+}
+main .myCapacity .work article {
+  width: 45%;
+}
+main .myCapacity .work article h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+main .myCapacity .work article h3 span {
+  color: rgb(226, 38, 226);
+}
+main .myCapacity .work article a img {
+  width: 150px;
+  height: 150px;
+  max-width: 150px;
+  max-height: 200px;
+  margin: 50px;
+  border-radius: 20px;
+  opacity: 0.2;
+  transition: all 0.3s;
+}
+main .myCapacity .work article a img:hover {
+  opacity: 1;
+}
+main .myCapacity .work .minis {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+main .myCapacity .know {
+  height: 105vh;
+  width: 47%;
+  margin-right: 15px;
+  margin-bottom: 5%;
+  border: 1px solid rgb(226, 38, 226);
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main .myCapacity .know h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: rgb(226, 38, 226);
+}
+main .myCapacity .know div {
+  width: 100%;
+  margin-bottom: 20px;
+}
+main .myCapacity .know div h4 {
+  color: rgb(226, 38, 226);
+  margin-bottom: 5px;
+}
+main .myCapacity .exp {
+  height: 105vh;
+  width: 48%;
+  margin-left: 15px;
+  margin-bottom: 5%;
+  border: 1px solid rgb(226, 38, 226);
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+}
+main .myCapacity .exp h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: rgb(226, 38, 226);
+}
+main .myCapacity .exp h5 {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+main .myCapacity .exp h4 {
+  color: rgb(226, 38, 226);
+  margin-bottom: 5px;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+footer h2 {
+  width: 95%;
+  color: rgb(226, 38, 226);
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 90px;
+  margin-top: 100px;
+  text-decoration: underline;
+  text-shadow: 3px 2px 3px rgba(226, 38, 226, 0.51);
+  letter-spacing: 2px;
+}
+footer .contact {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .contact .myData {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+footer .contact .myData h3 {
+  width: 60%;
+  color: rgb(226, 38, 226);
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-bottom: 30px;
+}
+footer .contact .myData ul {
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+footer .contact .myData ul li {
+  width: 60%;
+}
+footer .contact .myData ul li span {
+  color: rgb(226, 38, 226);
+}
+footer .contact .myData ul li a {
+  text-decoration: underline;
+  color: rgb(240, 248, 255);
+  transition: all 0.2s;
+}
+footer .contact .myData ul li a:hover {
+  color: rgb(245, 133, 245);
+}
+footer .contact .myData .social {
+  height: 7vh;
+  width: 30%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer .contact .myData .social a img {
+  max-width: 35px;
+  max-height: 35px;
+}
+footer .contact .myData .social a img:hover {
+  width: 35px;
+  height: 35px;
+}
+footer .contact .data {
+  height: 100%;
+  width: 50%;
+}
+footer .contact .data form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer .contact .data form label {
+  display: none;
+}
+footer .contact .data form .inputname {
+  width: 45%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+footer .contact .data form .inputname input {
+  width: 100%;
+  color: rgb(240, 248, 255);
+  background-color: rgb(82, 37, 82);
+  padding: 10px;
+  border-radius: 20px;
+}
+footer .contact .data form .inputemail {
+  width: 45%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+footer .contact .data form .inputemail input {
+  width: 100%;
+  color: rgb(240, 248, 255);
+  background-color: rgb(82, 37, 82);
+  padding: 10px;
+  border-radius: 20px;
+}
+footer .contact .data form .inputsubject {
+  width: 93%;
+  margin-bottom: 50px;
+}
+footer .contact .data form .inputsubject textarea {
+  width: 100%;
+  color: rgb(240, 248, 255);
+  background-color: rgb(82, 37, 82);
+  padding: 10px;
+  border-radius: 20px;
+}
+footer .contact .data form .send {
+  width: 35%;
+  color: rgb(240, 248, 255);
+  background-color: rgb(82, 37, 82);
+  text-decoration: none;
+  border: 2px solid rgb(240, 248, 255);
+  border-radius: 30px;
+  padding: 10px 15px 10px 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+footer .contact .data form .send:hover {
+  cursor: pointer;
+  background-color: rgb(226, 38, 226);
+}
+
+@media (min-width: 770px) and (max-width: 1281px) {
+  header .sticky {
+    width: 35vw;
+  }
+
+  main .imJuan .myPhoto img {
+    max-width: 300px;
+  }
+}
+@media (min-width: 377px) and (max-width: 769px) {
+  header .sticky {
+    width: 65vw;
+  }
+
+  main .imJuan .myPhoto img {
+    max-width: 250px;
+  }
+  main .imJuan .myInfo {
+    height: 60%;
+    width: 55%;
+  }
+  main .imJuan .myInfo div h2 {
+    font-size: 35px;
+  }
+  main .imJuan .myInfo div p {
+    font-size: 16px;
+  }
+  main .myCapacity .work {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main .myCapacity .work article {
+    width: 95%;
+  }
+  main .myCapacity .work .minis {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  main .myCapacity .know {
+    width: 95%;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  main .myCapacity .exp {
+    width: 95%;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  footer .contact .myData {
+    justify-content: flex-start;
+  }
+  footer .contact .myData ul {
+    justify-content: flex-start;
+  }
+  footer .contact .myData ul li {
+    width: 100%;
+  }
+  footer .contact .myData .social {
+    width: 100%;
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 0px) and (max-width: 376px) {
+  header .sticky {
+    width: 70%;
+  }
+
+  main .imJuan {
+    margin-top: 100px;
+    flex-direction: column;
+  }
+  main .imJuan .myPhoto img {
+    max-width: 150px;
+  }
+  main .imJuan .myInfo {
+    width: 98%;
+  }
+  main .imJuan .myInfo div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  main .imJuan .myInfo div h2 {
+    text-align: center;
+    font-size: 38px;
+  }
+  main .imJuan .myInfo div p {
+    text-align: center;
+    font-size: 18px;
+  }
+  main .imJuan .myInfo div a {
+    align-self: center;
+  }
+  main .myCapacity .work {
+    width: 100%;
+    flex-direction: column;
+  }
+  main .myCapacity .work article {
+    width: 98%;
+  }
+  main .myCapacity .work article h3 {
+    width: 100%;
+    text-align: center;
+  }
+  main .myCapacity .work article p {
+    width: 100%;
+    text-align: center;
+  }
+  main .myCapacity .work .minis {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    justify-content: center;
+    align-items: center;
+  }
+  main .myCapacity .work .minis a img {
+    margin: 15px;
+  }
+  main .myCapacity .know {
+    margin: 0;
+    margin-bottom: 10px;
+    width: 95%;
+  }
+  main .myCapacity .exp {
+    margin: 0;
+    margin-top: 10px;
+    width: 95%;
+  }
+
+  footer .contact {
+    flex-direction: column;
+  }
+  footer .contact .myData {
+    width: 100%;
+  }
+  footer .contact .myData h3 {
+    width: 95%;
+    text-align: center;
+  }
+  footer .contact .myData ul {
+    width: 95%;
+  }
+  footer .contact .myData ul li {
+    width: 100%;
+    text-align: center;
+  }
+  footer .contact .myData .social {
+    width: 95%;
+  }
+  footer .contact .data {
+    width: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */

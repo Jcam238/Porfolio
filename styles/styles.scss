@@ -1,0 +1,561 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    // border: 1px solid red;
+}
+
+@mixin letterColor {
+    color:rgb(226, 38, 226)
+}
+
+@mixin letterWhite {
+    color: rgb(240, 248, 255);;
+}
+
+@mixin subTitles {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+@mixin inputs {
+    width: 100%;
+    @include letterWhite();
+    background-color: rgb(82, 37, 82);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+@mixin hoverWhite{
+    color: rgb(245, 133, 245)
+}
+
+body{
+    @include letterWhite();
+    background-image: url(../img/background1.jpg);
+    font-family: 'Raleway',sans-serif;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .sticky{
+        position: fixed;
+        top: 0;
+        height: 5%;
+        width: 25vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgb(82, 37, 82);
+        padding: 5px;
+        border-radius: 15px;
+        margin-top: 10px;
+        border: 1px solid rgb(240, 248, 255);
+        font-weight: bold;
+        opacity: 0.4;
+        transition: all 0.2s;
+        a{
+            @include letterWhite();
+            text-decoration: none;
+        }
+        a:hover{
+            @include hoverWhite();
+        }
+    }
+    .sticky:hover{
+        opacity: 1.0;
+    }
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .imJuan{
+        height: 80vh;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        .myPhoto{
+            img{
+                max-width: 350px;
+                border-radius: 30px;
+            }
+        }
+        .myInfo{
+            height: 75%;
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            div{
+                h2{
+                    font-size: 45px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    margin-bottom: 15px;
+                    text-shadow: 3px 2px 3px rgba(255,255,255,0.51);
+                    span{
+                        @include letterColor();
+                        text-shadow: 3px 2px 3px rgba(226, 38, 226,0.51);
+                    }
+                }
+                p{
+                    font-size: 18px;
+                    letter-spacing: 1px;
+                }
+                a{
+                    @include letterWhite();
+                    text-decoration: none;
+                    border: 2px solid rgb(226, 38, 226);
+                    border-radius: 30px;
+                    padding: 10px 15px 10px 15px;
+                    transition: all 0.5s;
+                }
+                a:hover{
+                    background-color: rgba(226, 38, 226, 0.678);
+                    border: 2px solid rgb(240, 248, 255);
+                }
+                a::after{
+                    content: url(../img/dl.png);
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+    .myCapacity{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .work{
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5%;
+            article{
+                width: 45%;
+                h3{
+                    @include subTitles();
+                    span{
+                        @include letterColor();
+                    }
+                }
+                a{
+                    img{
+                        width: 150px;
+                        height: 150px;
+                        max-width: 150px;
+                        max-height: 200px;
+                        margin: 50px;
+                        border-radius: 20px;
+                        opacity: 0.2;
+                        transition: all 0.3s;
+                    }
+                    img:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+            .minis{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+            }
+        }
+        .know{
+            height: 105vh;
+            width: 47%;
+            margin-right: 15px;
+            margin-bottom: 5%;
+            border: 1px solid rgb(226, 38, 226);
+            border-radius: 15px;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            h3{
+                @include subTitles();
+                @include letterColor();
+            }
+            div{
+                width: 100%;
+                margin-bottom: 20px;
+                h4{
+                    @include letterColor();
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        .exp{
+            height: 105vh;
+            width: 48%;
+            margin-left: 15px;
+            margin-bottom: 5%;
+            border: 1px solid rgb(226, 38, 226);
+            border-radius: 15px;
+            padding: 10px;
+            text-align: center;
+            h3{
+                @include subTitles();
+                @include letterColor();
+            }
+            h5{
+                color: gray;
+                font-size: 14px;
+                margin-bottom: 5px;
+                margin-top: 30px;
+            }
+            h4{
+                @include letterColor();
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    h2{
+        width: 95%;
+        @include letterColor();
+        font-size: 45px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 90px;
+        margin-top: 100px;
+        text-decoration: underline;
+        text-shadow: 3px 2px 3px rgba(226, 38, 226,0.51);
+        letter-spacing: 2px;
+    }
+    .contact{
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .myData{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            h3{
+                width: 60%;
+                @include letterColor();
+                @include subTitles();
+                margin-bottom: 30px;
+            }
+            ul{
+                width: 100%;
+                height: 100%;
+                line-height: 50px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                li{
+                    width: 60%;
+                    span{
+                        @include letterColor();
+                    }
+                    a{
+                        text-decoration: underline;
+                        @include letterWhite();
+                        transition: all 0.2s;
+                    }
+                    a:hover{
+                        color: rgb(245, 133, 245);
+                    }
+                }
+            }
+            .social{
+                height: 7vh;
+                width: 30%;
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                a{
+                    img{
+                        max-width: 35px;
+                        max-height: 35px;
+                    }
+                    img:hover{
+                        width: 35px;
+                        height: 35px;
+                    }
+                }
+            }
+        }
+        .data{
+            height: 100%;
+            width: 50%;
+            form{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                align-items: center;
+                label{
+                    display: none;
+                }
+                .inputname{
+                    width: 45%;
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    input{
+                        @include inputs();
+                    }
+                }
+                .inputemail{
+                    width: 45%;
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    input{
+                        @include inputs();
+                    }
+                }
+                .inputsubject{
+                    width: 93%;
+                    margin-bottom: 50px;
+                    textarea{
+                        @include inputs();
+                    }
+                }
+                .send{
+                    width: 35%;
+                    @include letterWhite();
+                    background-color: rgb(82, 37, 82);
+                    text-decoration: none;
+                    border: 2px solid rgb(240, 248, 255);
+                    border-radius: 30px;
+                    padding: 10px 15px 10px 15px;
+                    margin-bottom: 15px;
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    transition: all 0.3s;
+                }
+                .send:hover{
+                    cursor: pointer;
+                    background-color: rgb(226, 38, 226);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 770px) and (max-width: 1281px){
+
+    header{
+        .sticky{
+            width: 35vw;
+        }
+    }
+
+    main{
+        .imJuan{
+            .myPhoto{
+                img{
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 377px) and (max-width: 769px){
+    
+    header{
+        .sticky{
+            width: 65vw;
+        }
+    }
+    main{
+        .imJuan{
+            .myPhoto{
+                img{
+                    max-width: 250px;
+                }
+            }
+            .myInfo{
+                height: 60%;
+                width: 55%;
+                div{
+                    h2{
+                        font-size: 35px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .myCapacity{
+            .work{
+                width: 100%;
+                flex-direction: column;
+                justify-content: space-between;
+                article{
+                    width: 95%;
+                }
+                .minis{
+                    margin-top: 20px;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .know{
+                width: 95%;
+                margin: 0;
+                margin-bottom: 10px;
+            }
+            .exp{
+                width: 95%;
+                margin: 0;
+                margin-top: 10px;
+            }
+        }
+    }
+    footer{
+        .contact{
+            .myData{
+                justify-content: flex-start;
+                ul{
+                    justify-content: flex-start;
+                    li{
+                        width: 100%;
+                    }
+                }
+                .social{
+                    width: 100%;
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 376px){
+
+    header{
+        .sticky{
+            width: 70%;
+        }
+    }
+
+    main{
+        .imJuan{
+            margin-top: 100px;
+            flex-direction: column;
+            .myPhoto{
+                img{
+                    max-width: 150px;
+                }
+            }
+            .myInfo{
+                width: 98%;
+                div{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    h2{
+                        text-align: center;
+                        font-size: 38px;
+                    }
+                    p{
+                        text-align: center;
+                        font-size: 18px;
+                    }
+                    a{
+                        align-self: center;
+                    }
+                }
+            }
+        }
+        .myCapacity{
+            .work{
+                width: 100%;
+                flex-direction: column;
+                article{
+                    width: 98%;
+                    h3{
+                        width: 100%;
+                        text-align: center;
+                    }
+                    p{
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+                .minis{
+                    margin-top: 35px;
+                    margin-bottom: 35px;
+                    justify-content: center;
+                    align-items: center;
+                    a{
+                        img{
+                            margin: 15px;
+                        }
+                    }
+                }
+            }
+            .know{
+                margin: 0;
+                margin-bottom: 10px;
+                width: 95%;
+            }
+            .exp{
+                margin: 0;
+                margin-top: 10px;
+                width: 95%;
+            }
+        }
+    }
+
+    footer{
+        .contact{
+            flex-direction: column;
+            .myData{
+                width: 100%;
+                h3{
+                    width: 95%;
+                    text-align: center;
+                }
+                ul{
+                    width: 95%;
+                    li{
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+                .social{
+                    width: 95%;
+                }
+            }
+            .data{
+                width: 100%;
+            }
+        }
+    }
+}
